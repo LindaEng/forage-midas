@@ -13,6 +13,10 @@ public class DatabaseConduit {
     }
 
     public void save(UserRecord userRecord) {
+
+        System.out.println("Attempting to save User: " + userRecord);
+            userRepository.save(userRecord); // Ensure this line is actually saving
+            System.out.println("User saved successfully: " + userRecord);
         userRepository.save(userRecord);
     }
 
